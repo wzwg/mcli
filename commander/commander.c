@@ -56,6 +56,6 @@ int commander_call(commander_t *p, char *param)
     itf_command_t *cmd = p->conta->find_command(p->conta->p, cmd_name);
     // trie_node_t *cmdNode = trie_find_command_node(&p->container.root, cmd_name);
     if (cmd != NULL) {
-        cmd->entry(cmd->entry,  &cmd_param, 0);
+        cmd->entry(cmd->p,  &cmd_param, 0);
     }
 }
