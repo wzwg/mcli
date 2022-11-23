@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "trie.h": "c",
+        "def_command.h": "c"
+    }
+}
