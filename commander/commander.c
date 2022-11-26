@@ -5,7 +5,7 @@
 #include "commands/default_command.h"
 #include "container/trie_container.h"
 
-int commander_init(commander_t *p)
+int commander_init(commander_t *p, itf_writer_t *stdout)
 {
     if (p == NULL) return 0;
 
@@ -13,12 +13,26 @@ int commander_init(commander_t *p)
 
     p->conta = trie_container_new();
 
-    register_builtin_commands(p);
+    commander_set_stdout(p, stdout);
+
+    // initialize public interface 
+    p->cmder.p = p;
+    p->cmder.call = commander_call;
+    p->cmder.register_cmd = commander_register;
+    p->cmder.set_stdout = commander_set_stdout;
+
+    register_builtin_commands(&p->cmder);
 
     return 0;
 }
 
-int commander_register(commander_t *p, char *cmd_name, itf_command_t *cmd) 
+int commander_set_stdout(commander_t *p, itf_writer_t *stdout)
+{
+    p->istdout = stdout;
+}
+
+
+int commander_register(commander_t *p, const char *cmd_name, itf_command_t *cmd) 
 {
     int ret = 0;
 
@@ -34,28 +48,12 @@ int commander_register(commander_t *p, char *cmd_name, itf_command_t *cmd)
     return 0;
 }
 
-int commander_call(commander_t *p, char *param)
+int commander_call(commander_t *p, int argc, const char **argv)
 {
     if (p == NULL) return 0;
-    
-    int length = strlen(param);
 
-    char *cmd_name = malloc(length+1);
-    char *cmd_param;
-    for (int i=0; i<length; i++) {
-        if (param[i] == ' ') {
-            cmd_name[i] = '\0';
-            if (i+1 <= length) {
-                cmd_param = &param[i+1];
-            }
-            break;
-        }
-        cmd_name[i] = param[i];
-    }
-
-    itf_command_t *cmd = p->conta->find_command(p->conta->p, cmd_name);
-    // trie_node_t *cmdNode = trie_find_command_node(&p->container.root, cmd_name);
+    itf_command_t *cmd = p->conta->find_command(p->conta->p, argv);
     if (cmd != NULL) {
-        cmd->entry(cmd->p,  &cmd_param, 0);
+        cmd->entry(cmd->p,  argc, argv, p->istdout);
     }
 }

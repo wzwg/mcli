@@ -1,31 +1,36 @@
 [
 {
-  "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Icommander\\commands", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\commander.c.obj", "commander\\commander.c"],
-  "file": "commander\\commander.c"
+  "directory": "/workspaces/codespaces-blank",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander/container", "-Icommander/commands", "-Icommon", "-o", "build/.objs/commander/linux/x86_64/debug/commander/commander.c.o", "commander/commander.c"],
+  "file": "commander/commander.c"
 },
 {
-  "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Icommander\\commands", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\container\\trie.c.obj", "commander\\container\\trie.c"],
-  "file": "commander\\container\\trie.c"
+  "directory": "/workspaces/codespaces-blank",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander/container", "-Icommander/commands", "-Icommon", "-o", "build/.objs/commander/linux/x86_64/debug/commander/container/trie_container.c.o", "commander/container/trie_container.c"],
+  "file": "commander/container/trie_container.c"
 },
 {
-  "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Icommander\\commands", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\commands\\default_command.c.obj", "commander\\commands\\default_command.c"],
-  "file": "commander\\commands\\default_command.c"
+  "directory": "/workspaces/codespaces-blank",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander/container", "-Icommander/commands", "-Icommon", "-o", "build/.objs/commander/linux/x86_64/debug/commander/container/trie.c.o", "commander/container/trie.c"],
+  "file": "commander/container/trie.c"
 },
 {
-  "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Icommander\\commands", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\commands\\echo\\echo.c.obj", "commander\\commands\\echo\\echo.c"],
-  "file": "commander\\commands\\echo\\echo.c"
+  "directory": "/workspaces/codespaces-blank",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander/container", "-Icommander/commands", "-Icommon", "-o", "build/.objs/commander/linux/x86_64/debug/commander/commands/default_command.c.o", "commander/commands/default_command.c"],
+  "file": "commander/commands/default_command.c"
 },
 {
-  "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Icommander\\commands", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\commands\\help\\help.c.obj", "commander\\commands\\help\\help.c"],
-  "file": "commander\\commands\\help\\help.c"
+  "directory": "/workspaces/codespaces-blank",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander/container", "-Icommander/commands", "-Icommon", "-o", "build/.objs/commander/linux/x86_64/debug/commander/commands/help/help.c.o", "commander/commands/help/help.c"],
+  "file": "commander/commands/help/help.c"
 },
 {
-  "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-o", "build\\.objs\\main\\mingw\\x86_64\\debug\\main.c.obj", "main.c"],
+  "directory": "/workspaces/codespaces-blank",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander/container", "-Icommander/commands", "-Icommon", "-o", "build/.objs/commander/linux/x86_64/debug/commander/commands/echo/echo.c.o", "commander/commands/echo/echo.c"],
+  "file": "commander/commands/echo/echo.c"
+},
+{
+  "directory": "/workspaces/codespaces-blank",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommon", "-o", "build/.objs/main/linux/x86_64/debug/main.c.o", "main.c"],
   "file": "main.c"
 }]

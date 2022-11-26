@@ -30,7 +30,7 @@ static trie_node_t *trie_find_child_by_data(trie_node_t *p, char d)
 }
 
 // return nearly matched node, e.g have 'hel', input 'help', 'hel' matched, return node of 'l'
-trie_node_t *trie_find_mathced_node(trie_node_t *p, char s[], int *matchedCnt)
+trie_node_t *trie_find_mathced_node(trie_node_t *p, char *s, int *matchedCnt)
 {
     trie_node_t *node = p;
     trie_node_t *matched = 0;

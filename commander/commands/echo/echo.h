@@ -1,7 +1,7 @@
 #ifndef __ECHO_H__
 #define __ECHO_H__
 
-#include "def/def_command.h"
+#include "cdef/def_command.h"
 
 typedef struct echo
 {
