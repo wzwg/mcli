@@ -13,8 +13,8 @@ typedef struct {
     itf_container_t *conta;
 }commander_t;
 
-int commander_init(commander_t *p, itf_writer_t *stdout);
-int commander_set_stdout(commander_t *p, itf_writer_t *stdout);
+int commander_init(commander_t *p, itf_writer_t *cstdout);
+int commander_set_stdout(commander_t *p, itf_writer_t *cstdout);
 int commander_register(commander_t *p, const char *cmd_name, itf_command_t *cmd);
 int commander_call(commander_t *p, int argc, const char **argv);
 
