@@ -3,11 +3,11 @@
 
 #include <stdint.h>
 
-typedef int (*writer_t)(void *p, uint8_t *buf, int length);
+typedef int (*write_t)(void *p, uint8_t *buf, int length);
 
 typedef struct {
     void *p;
-    writer_t writer;
+    write_t write;
 }itf_writer_t;
 
 #endif 

@@ -1,9 +1,18 @@
 #include "echo.h"
 #include <stdio.h>
 
-static void entry(void *p, int argc, const char **argv, itf_writer_t *out)
+static int entry(void *p, int argc, const char **argv, itf_writer_t *out)
 {
-    printf("echo cmd\r\n");
+    for (int i = 1; i < argc; i++)
+    {
+        out->write(out->p, argv[i], strlen(argv[i]));
+        if (i < argc)
+        {
+            out->write(out->p, " ", 1);
+        }
+    }
+
+    return 0;
 }
 
 void echo_cmd_init(echo_cmd_t *p)

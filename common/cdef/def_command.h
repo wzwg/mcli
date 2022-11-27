@@ -3,8 +3,12 @@
 
 #include "def_io.h"
 
-// definition of command
-typedef void (*command_entry_t)(void *p, int argc, const char **argv, itf_writer_t *out);
+// definition of command.
+/*
+* argc: indicate the number of arguments
+* argv: arguments. the first argument is the command name
+*/
+typedef int (*command_entry_t)(void *p, int argc, const char **argv, itf_writer_t *out);
 
 // definition of command internal storage model
 typedef struct {

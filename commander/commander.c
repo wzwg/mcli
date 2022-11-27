@@ -8,6 +8,7 @@
 int commander_init(commander_t *p, itf_writer_t *stdout)
 {
     if (p == NULL) return 0;
+    if (stdout == NULL) return -1;
 
     memset(p, 0, sizeof(commander_t));
 
@@ -51,9 +52,12 @@ int commander_register(commander_t *p, const char *cmd_name, itf_command_t *cmd)
 int commander_call(commander_t *p, int argc, const char **argv)
 {
     if (p == NULL) return 0;
+    if (argc < 1) return -1;
 
-    itf_command_t *cmd = p->conta->find_command(p->conta->p, argv);
+    itf_command_t *cmd = p->conta->find_command(p->conta->p, argv[0]);
     if (cmd != NULL) {
-        cmd->entry(cmd->p,  argc, argv, p->istdout);
+        return cmd->entry(cmd->p,  argc, argv, p->istdout);
     }
+
+    return 0;
 }
