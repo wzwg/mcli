@@ -72,7 +72,8 @@ trie_node_t *trie_find_command_node(trie_node_t *p, char *s)
 
 int trie_add_cmd(trie_node_t *t, const char *name, void *ud)
 {
-    if (name == NULL) {
+    if (name == NULL)
+    {
         return 0;
     }
     trie_node_t *p = t;
@@ -195,6 +196,11 @@ void trie_init(trie_t *t)
     reset_data(t, sizeof(trie_t));
 }
 
+void trie_deinit(trie_t *t)
+{
+    // TODO
+}
+
 void trie_node_init(trie_node_t *n)
 {
     if (n == NULL)
@@ -208,4 +214,4 @@ void trie_node_init(trie_node_t *n)
 int (*add_command)(void *p, const char *name, void *data);
 void *(*find_command)(void *p, const char *name);
 // status: 1-indicate end of a name; 2- indicate end of all
-int (*get_optional_commands)(void *p, void (*stream)(char c, char status)); 
+int (*get_optional_commands)(void *p, void (*stream)(char c, char status));

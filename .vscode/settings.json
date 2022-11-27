@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "trie.h": "c",
-        "def_command.h": "c"
+        "def_command.h": "c",
+        "def_io.h": "c",
+        "commander_itf.h": "c",
+        "def_commander.h": "c",
+        "stdint.h": "c",
+        "default_command.h": "c"
     }
 }
