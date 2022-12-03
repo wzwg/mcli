@@ -10,7 +10,7 @@ typedef struct
     void *p;
     int (*register_cmd)(void *p, const char *cmd_name, itf_command_t *cmd);
     int (*call)(void *p, int argc, const char **argv);
-    int (*set_stdout)(void *p, itf_writer_t *writer);
+    int (*set_outobj)(void *p, itf_writer_t *writer);
 } itf_commander_t;
 
 #endif

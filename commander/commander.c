@@ -34,7 +34,7 @@ int commander_deinit(commander_t *p)
 
 int commander_set_stdout(commander_t *p, itf_writer_t *stdout)
 {
-    p->cstdout = stdout;
+    p->outobj = stdout;
     return 0;
 }
 
@@ -68,7 +68,7 @@ int commander_call(commander_t *p, int argc, const char **argv)
     itf_command_t *cmd = p->conta->find_command(p->conta->p, argv[0]);
     if (cmd != NULL)
     {
-        return ITF_CALL(cmd, entry, argc, argv, p->cstdout);
+        return ITF_CALL(cmd, entry, argc, argv, p->outobj);
     }
 
     return 0;

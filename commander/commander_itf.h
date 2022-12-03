@@ -4,7 +4,7 @@
 #include "cdef/def_commander.h"
 #include "cdef/def_io.h"
 
-itf_commander_t *commander_itf_new(itf_writer_t *cstdout);
+itf_commander_t *commander_itf_new(itf_writer_t *outobj);
 int commander_itf_deinit(itf_commander_t *p);
 /**
  * A solution for the problem to staticly create data

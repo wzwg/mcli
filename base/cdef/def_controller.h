@@ -9,7 +9,7 @@ typedef struct
 {
     void *p;
     int (*input)(void *p, int length, char *buf);
-    int (*set_stdout)(void *p, itf_writer_t *writer);
+    int (*set_outobj)(void *p, itf_writer_t *writer);
 } itf_controller_t;
 
 #endif

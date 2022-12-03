@@ -23,7 +23,7 @@ static int call(void *p, int argc, const char **argv)
 
     return commander_call(&self->commander, argc, argv);
 }
-static int set_stdout(void *p, itf_writer_t *writer)
+static int set_outobj(void *p, itf_writer_t *writer)
 {
     commander_itf_t *self = (commander_itf_t *)p;
     if (self == NULL)
@@ -31,16 +31,16 @@ static int set_stdout(void *p, itf_writer_t *writer)
     return commander_set_stdout(&self->commander, writer);
 }
 
-itf_commander_t *commander_itf_new(itf_writer_t *cstdout)
+itf_commander_t *commander_itf_new(itf_writer_t *outobj)
 {
     commander_itf_t *cmder = malloc(sizeof(commander_itf_t));
-    commander_init(&cmder->commander, cstdout);
+    commander_init(&cmder->commander, outobj);
 
     // initialize public interface
     cmder->itf.p = cmder;
     cmder->itf.call = call;
     cmder->itf.register_cmd = register_cmd;
-    cmder->itf.set_stdout = set_stdout;
+    cmder->itf.set_outobj = set_outobj;
 
     return &cmder->itf;
 }

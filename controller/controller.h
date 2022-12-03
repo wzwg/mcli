@@ -5,7 +5,7 @@
 
 typedef struct
 {
-    itf_writer_t *cstdout;
+    itf_writer_t *outobj;
 } controller_t;
 
 #endif

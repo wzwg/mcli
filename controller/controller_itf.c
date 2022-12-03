@@ -61,12 +61,12 @@ static int input(void *p, int length, char *buf)
     return 0;
 }
 
-static int set_stdout(void *p, itf_writer_t *writer)
+static int set_outobj(void *p, itf_writer_t *writer)
 {
     if (p == NULL)
         return -1;
     controller_itf_t *self = p;
-    self->controller.cstdout = writer;
+    self->controller.outobj = writer;
 
     return 0;
 }
@@ -80,9 +80,9 @@ itf_controller_t *controller_itf_new(itf_commander_t *cmder, itf_writer_t *write
 
     ctrler->itf.p = ctrler;
     ctrler->itf.input = input;
-    ctrler->itf.set_stdout = set_stdout;
+    ctrler->itf.set_outobj = set_outobj;
 
-    ITF_CALL(&ctrler->itf, set_stdout, writer);
+    ITF_CALL(&ctrler->itf, set_outobj, writer);
 
     return &ctrler->itf;
 }
