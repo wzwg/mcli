@@ -7,7 +7,7 @@
 #include "cdef/def_io.h"
 #include "util.h"
 
-static int write(void *p, uint8_t *buf, int length)
+static int write(void *p, const uint8_t *buf, int length)
 {
     for (int i = 0; i < length; i++)
     {
@@ -30,7 +30,7 @@ int testCommander()
 
     char *cargv[] = {"echo", "test", "you are sou curted"};
 
-    ITF_CALL(cmder, call, sizeof(cargv) / sizeof(*cargv), cargv);
+    ITF_CALL(cmder, call, sizeof(cargv) / sizeof(*cargv), (const char **)cargv);
 
     return 0;
 }

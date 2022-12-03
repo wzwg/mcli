@@ -1,3 +1,4 @@
+
 #include <stdlib.h>
 #include "trie_container.h"
 #include "trie.h"
@@ -19,6 +20,8 @@ static int add_command(void *p, const char *name, void *data)
     {
         return ret;
     }
+
+    return 0;
 }
 
 static void *find_command(void *p, const char *name)
@@ -41,13 +44,7 @@ static int get_optional_commands(void *p, stream_t stream)
     // TODO
     if (p == NULL)
         return -1;
-}
-
-itf_container_t *trie_container_new()
-{
-    trie_container_t *conta = malloc(sizeof(trie_container_t));
-    trie_container_init(conta);
-    return &conta->itf;
+    return 0;
 }
 
 int trie_container_init(trie_container_t *ins)
@@ -64,4 +61,12 @@ int trie_container_init(trie_container_t *ins)
 int trie_container_deinit(itf_container_t *itf)
 {
     // TODO
+    return 0;
+}
+
+itf_container_t *trie_container_new()
+{
+    trie_container_t *conta = malloc(sizeof(trie_container_t));
+    trie_container_init(conta);
+    return &conta->itf;
 }

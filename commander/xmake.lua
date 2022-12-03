@@ -1,8 +1,10 @@
 includes("../common")
 
 target("commander")
-
     set_kind("static")
+
+    add_cflags("-pedantic", "-Wall", "-Werror", "-pedantic-errors", {force=true})
+    
     add_files("*.c")
     add_files("container/*.c")
     add_files("commands/*.c")

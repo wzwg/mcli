@@ -22,9 +22,9 @@ typedef struct
 } trie_t;
 
 int trie_add_cmd(trie_node_t *t, const char *name, void *ud);
-trie_node_t *trie_find_command_node(trie_node_t *p, char *s);
+trie_node_t *trie_find_command_node(trie_node_t *p, const char *s);
 int trie_list_all_commands(trie_node_t *p);
-trie_node_t *trie_find_mathced_node(trie_node_t *p, char *s, int *matchedCnt);
+trie_node_t *trie_find_mathced_node(trie_node_t *p, const char *s, int *matchedCnt);
 void trie_init(trie_t *t);
 void trie_deinit(trie_t *t);
 void trie_node_init(trie_node_t *n);

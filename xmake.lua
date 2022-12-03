@@ -1,10 +1,9 @@
 add_rules("mode.debug", "mode.release")
 
-includes("commander")
-includes("controller")
-
 add_cflags("-pedantic", "-Wall", "-Werror", "-pedantic-errors", {force=true})
 
+includes("commander")
+includes("controller")
 
 target("main")
     set_kind("binary")

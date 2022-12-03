@@ -12,7 +12,7 @@ typedef struct
     itf_controller_t itf;
     controller_t controller;
     itf_commander_t *cmder;
-} controller_itf_obj_t;
+} controller_itf_t;
 
 // TODO use dynamic array
 static int input(void *p, int length, char *buf)
@@ -20,7 +20,7 @@ static int input(void *p, int length, char *buf)
     if (p == NULL)
         return -1;
 
-    controller_itf_obj_t *ctrler = (controller_itf_obj_t *)p;
+    controller_itf_t *self = (controller_itf_t *)p;
     char *params[MAX_NUM_PARAMETERS] = {0};
     int cnt = 0;
 
@@ -50,7 +50,7 @@ static int input(void *p, int length, char *buf)
         }
     }
 
-    ITF_CALL(ctrler->cmder, call, cnt, params);
+    ITF_CALL(self->cmder, call, cnt, (const char **)params);
 
     // free allocated memory
     for (int i = 0; i < cnt; i++)
@@ -65,16 +65,16 @@ static int set_stdout(void *p, itf_writer_t *writer)
 {
     if (p == NULL)
         return -1;
-    controller_itf_obj_t *ins = p;
-    ins->controller.cstdout = p;
+    controller_itf_t *self = p;
+    self->controller.cstdout = writer;
 
     return 0;
 }
 
 itf_controller_t *controller_itf_new(itf_commander_t *cmder, itf_writer_t *writer)
 {
-    controller_itf_obj_t *ctrler = malloc(sizeof(controller_itf_obj_t));
-    memset(ctrler, 0, sizeof(controller_itf_obj_t));
+    controller_itf_t *ctrler = malloc(sizeof(controller_itf_t));
+    memset(ctrler, 0, sizeof(controller_itf_t));
 
     ctrler->cmder = cmder;
 

@@ -10,6 +10,7 @@
         "controller.h": "c",
         "def_container.h": "c",
         "def_controller.h": "c",
-        "controller_itf.h": "c"
+        "controller_itf.h": "c",
+        "io.h": "c"
     }
 }

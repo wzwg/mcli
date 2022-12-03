@@ -30,7 +30,7 @@ static trie_node_t *trie_find_child_by_data(trie_node_t *p, char d)
 }
 
 // return nearly matched node, e.g have 'hel', input 'help', 'hel' matched, return node of 'l'
-trie_node_t *trie_find_mathced_node(trie_node_t *p, char *s, int *matchedCnt)
+trie_node_t *trie_find_mathced_node(trie_node_t *p, const char *s, int *matchedCnt)
 {
     trie_node_t *node = p;
     trie_node_t *matched = 0;
@@ -57,7 +57,7 @@ trie_node_t *trie_find_mathced_node(trie_node_t *p, char *s, int *matchedCnt)
     return matched;
 }
 
-trie_node_t *trie_find_command_node(trie_node_t *p, char *s)
+trie_node_t *trie_find_command_node(trie_node_t *p, const char *s)
 {
     trie_node_t *node;
     int cnt;
@@ -142,20 +142,20 @@ static int trie_text_curup(trie_node_t *node, char buf[])
     return 0;
 }
 
-static int trie_level_no(trie_node_t *node)
-{
-    int i = 0;
+// static int trie_level_no(trie_node_t *node)
+// {
+//     int i = 0;
 
-    if (node == NULL)
-        return 0;
+//     if (node == NULL)
+//         return 0;
 
-    for (; node != NULL; i++)
-    {
-        node = node->parent;
-    }
+//     for (; node != NULL; i++)
+//     {
+//         node = node->parent;
+//     }
 
-    return i;
-}
+//     return i;
+// }
 
 static void _trie_list_all_commands_dfs(trie_node_t *node)
 {
@@ -179,13 +179,13 @@ int trie_list_all_commands(trie_node_t *p)
     return 0;
 }
 
-static reset_data(void *data, int size)
+static void reset_data(void *data, int size)
 {
     if ((data == NULL) || size == 0)
         return;
 
     memset(data, 0, size);
-    return 0;
+    return;
 }
 
 void trie_init(trie_t *t)

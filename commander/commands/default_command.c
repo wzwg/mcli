@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "default_command.h"
 #include "echo/echo.h"
 #include "util.h"

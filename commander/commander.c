@@ -28,11 +28,14 @@ int commander_deinit(commander_t *p)
     trie_container_deinit(p->conta);
     free(p->conta);
     p->conta = NULL;
+
+    return 0;
 }
 
 int commander_set_stdout(commander_t *p, itf_writer_t *stdout)
 {
     p->cstdout = stdout;
+    return 0;
 }
 
 int commander_register(commander_t *p, const char *cmd_name, itf_command_t *cmd)
