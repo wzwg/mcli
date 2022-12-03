@@ -13,6 +13,8 @@ static int write(void *p, uint8_t *buf, int length)
     {
         putchar(buf[i]);
     }
+
+    return 0;
 }
 
 static itf_writer_t writer = {
@@ -35,10 +37,11 @@ int testCommander()
 
 int main(int argc, char **argv)
 {
-    itf_controller_t *ctrler;
-    ctrler = controller_itf_new(&writer);
+    // testCommander();
+    itf_commander_t *cmder = commander_itf_new(&writer);
+    itf_controller_t *ctrler = controller_itf_new(cmder, &writer);
 
-    char inputText[] = "echo hello world";
+    char inputText[] = "echo hello world hahah";
 
     ITF_CALL(ctrler, input, sizeof(inputText), inputText);
 

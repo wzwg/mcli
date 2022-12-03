@@ -20,7 +20,7 @@ static int input(void *p, int length, char *buf)
     if (p == NULL)
         return -1;
 
-    controller_itf_obj_t *ins = (controller_itf_obj_t *)p;
+    controller_itf_obj_t *ctrler = (controller_itf_obj_t *)p;
     char *params[MAX_NUM_PARAMETERS] = {0};
     int cnt = 0;
 
@@ -38,9 +38,11 @@ static int input(void *p, int length, char *buf)
             end = i;
             if ((end - start) > 0)
             {
-                char *ns = malloc(end - start + 1);
-                memcpy(ns, buf[start], end - start);
-                ns[end - start] = '\0';
+                int nsLen = end - start;
+                char *ns = malloc(nsLen + 1);
+                memcpy(ns, &buf[start], end - start);
+
+                ns[nsLen] = '\0';
                 params[cnt++] = ns;
             }
 
@@ -48,7 +50,7 @@ static int input(void *p, int length, char *buf)
         }
     }
 
-    ITF_CALL(ins->cmder, call, cnt, params);
+    ITF_CALL(ctrler->cmder, call, cnt, params);
 
     // free allocated memory
     for (int i = 0; i < cnt; i++)
@@ -65,21 +67,12 @@ static int set_stdout(void *p, itf_writer_t *writer)
         return -1;
     controller_itf_obj_t *ins = p;
     ins->controller.cstdout = p;
+
+    return 0;
 }
 
-int init(controller_itf_obj_t *p)
+itf_controller_t *controller_itf_new(itf_commander_t *cmder, itf_writer_t *writer)
 {
-}
-int deinit() {}
-
-itf_controller_t *controller_itf_new(itf_writer_t *writer)
-{
-    itf_commander_t *cmder = commander_itf_new(writer);
-    if (cmder == NULL)
-    {
-        return NULL;
-    }
-
     controller_itf_obj_t *ctrler = malloc(sizeof(controller_itf_obj_t));
     memset(ctrler, 0, sizeof(controller_itf_obj_t));
 
@@ -89,5 +82,7 @@ itf_controller_t *controller_itf_new(itf_writer_t *writer)
     ctrler->itf.input = input;
     ctrler->itf.set_stdout = set_stdout;
 
-    return ctrler;
+    ITF_CALL(&ctrler->itf, set_stdout, writer);
+
+    return &ctrler->itf;
 }
