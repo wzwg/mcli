@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include "commander_itf.h"
 #include "commander.h"
-#include "commands/default_command.h"
 
 typedef struct
 {
@@ -42,8 +41,6 @@ itf_commander_t *commander_itf_new(itf_writer_t *cstdout)
     cmder->itf.call = call;
     cmder->itf.register_cmd = register_cmd;
     cmder->itf.set_stdout = set_stdout;
-
-    register_builtin_commands(&cmder->itf);
 
     return &cmder->itf;
 }

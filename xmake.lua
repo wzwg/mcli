@@ -4,11 +4,12 @@ add_cflags("-pedantic", "-Wall", "-Werror", "-pedantic-errors", {force=true})
 
 includes("commander")
 includes("controller")
+includes("commands")
 
 target("main")
     set_kind("binary")
     add_files("main.c")
-    add_deps("commander", "controller")
+    add_deps("commander", "controller", "commands")
 
 
 --

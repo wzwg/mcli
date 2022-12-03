@@ -1,4 +1,4 @@
-includes("../common")
+includes("../base")
 
 target("controller")
     set_kind("static")
@@ -9,7 +9,7 @@ target("controller")
 
     add_includedirs("./",  {public = true})
 
-    add_deps("common")
+    add_deps("base")
 
 
 

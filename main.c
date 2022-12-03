@@ -3,6 +3,7 @@
 
 #include "commander_itf.h"
 #include "controller_itf.h"
+#include "builtin_command.h"
 
 #include "cdef/def_io.h"
 #include "util.h"
@@ -27,6 +28,7 @@ int testCommander()
     itf_commander_t *cmder;
 
     cmder = commander_itf_new(&writer);
+    register_builtin_commands(cmder);
 
     char *cargv[] = {"echo", "test", "you are sou curted"};
 
@@ -39,6 +41,7 @@ int main(int argc, char **argv)
 {
     // testCommander();
     itf_commander_t *cmder = commander_itf_new(&writer);
+    register_builtin_commands(cmder);
     itf_controller_t *ctrler = controller_itf_new(cmder, &writer);
 
     char inputText[] = "echo hello world hahah";

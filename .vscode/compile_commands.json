@@ -1,51 +1,46 @@
 [
 {
   "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Icommander\\commands", "-Icommon", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\commander.c.obj", "commander\\commander.c"],
+  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommands", "-Icontroller", "-Icommander", "-Ibase", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\main\\mingw\\x86_64\\debug\\main.c.obj", "main.c"],
+  "file": "main.c"
+},
+{
+  "directory": "e:\\mProjects\\creations\\mCLI-InC",
+  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Ibase", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\commander.c.obj", "commander\\commander.c"],
   "file": "commander\\commander.c"
 },
 {
   "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Icommander\\commands", "-Icommon", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\commander_itf.c.obj", "commander\\commander_itf.c"],
+  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Ibase", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\commander_itf.c.obj", "commander\\commander_itf.c"],
   "file": "commander\\commander_itf.c"
 },
 {
   "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Icommander\\commands", "-Icommon", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\container\\trie.c.obj", "commander\\container\\trie.c"],
+  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Ibase", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\container\\trie.c.obj", "commander\\container\\trie.c"],
   "file": "commander\\container\\trie.c"
 },
 {
   "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Icommander\\commands", "-Icommon", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\container\\trie_container.c.obj", "commander\\container\\trie_container.c"],
+  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Ibase", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\container\\trie_container.c.obj", "commander\\container\\trie_container.c"],
   "file": "commander\\container\\trie_container.c"
 },
 {
   "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Icommander\\commands", "-Icommon", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\commands\\default_command.c.obj", "commander\\commands\\default_command.c"],
-  "file": "commander\\commands\\default_command.c"
-},
-{
-  "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Icommander\\commands", "-Icommon", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\commands\\echo\\echo.c.obj", "commander\\commands\\echo\\echo.c"],
-  "file": "commander\\commands\\echo\\echo.c"
-},
-{
-  "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander\\container", "-Icommander\\commands", "-Icommon", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\commander\\mingw\\x86_64\\debug\\commander\\commands\\help\\help.c.obj", "commander\\commands\\help\\help.c"],
-  "file": "commander\\commands\\help\\help.c"
-},
-{
-  "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommon", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\common\\mingw\\x86_64\\debug\\common\\io.c.obj", "common\\io.c"],
-  "file": "common\\io.c"
-},
-{
-  "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icontroller", "-Icommon", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\controller\\mingw\\x86_64\\debug\\controller\\controller_itf.c.obj", "controller\\controller_itf.c"],
+  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icontroller", "-Ibase", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\controller\\mingw\\x86_64\\debug\\controller\\controller_itf.c.obj", "controller\\controller_itf.c"],
   "file": "controller\\controller_itf.c"
 },
 {
   "directory": "e:\\mProjects\\creations\\mCLI-InC",
-  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icontroller", "-Icommander", "-Icommon", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\main\\mingw\\x86_64\\debug\\main.c.obj", "main.c"],
-  "file": "main.c"
+  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Ibase", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\base\\mingw\\x86_64\\debug\\base\\uio.c.obj", "base\\uio.c"],
+  "file": "base\\uio.c"
+},
+{
+  "directory": "e:\\mProjects\\creations\\mCLI-InC",
+  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommands", "-Ibase", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\commands\\mingw\\x86_64\\debug\\commands\\echo\\echo.c.obj", "commands\\echo\\echo.c"],
+  "file": "commands\\echo\\echo.c"
+},
+{
+  "directory": "e:\\mProjects\\creations\\mCLI-InC",
+  "arguments": ["C:\\Users\\vano\\scoop\\apps\\mingw\\current\\bin\\x86_64-w64-mingw32-gcc.exe", "-c", "-m64", "-g", "-O0", "-Icommands", "-Ibase", "-pedantic", "-Wall", "-Werror", "-pedantic-errors", "-o", "build\\.objs\\commands\\mingw\\x86_64\\debug\\commands\\builtin_command.c.obj", "commands\\builtin_command.c"],
+  "file": "commands\\builtin_command.c"
 }]
