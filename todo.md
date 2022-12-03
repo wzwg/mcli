@@ -1,4 +1,4 @@
 
-* 实现 controller 
+* 实现 controller [o]
 
 * enhance controller (more useful symbols support)
