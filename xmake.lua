@@ -1,11 +1,13 @@
 add_rules("mode.debug", "mode.release")
 
 includes("commander")
+includes("controller")
+
 
 target("main")
     set_kind("binary")
     add_files("main.c")
-    add_deps("commander")
+    add_deps("commander", "controller")
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io

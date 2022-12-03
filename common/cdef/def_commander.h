@@ -5,8 +5,6 @@
 #include "def_command.h"
 #include "def_io.h"
 
-typedef int (*writer_t)(void *p, uint8_t *buf, int length);
-
 typedef struct
 {
     void *p;

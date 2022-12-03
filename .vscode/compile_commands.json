@@ -1,8 +1,18 @@
 [
 {
   "directory": "/workspaces/codespaces-blank",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Icontroller", "-Icommander", "-Icommon", "-o", "build/.objs/main/linux/x86_64/debug/main.c.o", "main.c"],
+  "file": "main.c"
+},
+{
+  "directory": "/workspaces/codespaces-blank",
   "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander/container", "-Icommander/commands", "-Icommon", "-o", "build/.objs/commander/linux/x86_64/debug/commander/commander.c.o", "commander/commander.c"],
   "file": "commander/commander.c"
+},
+{
+  "directory": "/workspaces/codespaces-blank",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommander/container", "-Icommander/commands", "-Icommon", "-o", "build/.objs/commander/linux/x86_64/debug/commander/commander_itf.c.o", "commander/commander_itf.c"],
+  "file": "commander/commander_itf.c"
 },
 {
   "directory": "/workspaces/codespaces-blank",
@@ -31,6 +41,11 @@
 },
 {
   "directory": "/workspaces/codespaces-blank",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Icommander", "-Icommon", "-o", "build/.objs/main/linux/x86_64/debug/main.c.o", "main.c"],
-  "file": "main.c"
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Icontroller", "-Icommander", "-Icommon", "-o", "build/.objs/controller/linux/x86_64/debug/controller/controller_itf.c.o", "controller/controller_itf.c"],
+  "file": "controller/controller_itf.c"
+},
+{
+  "directory": "/workspaces/codespaces-blank",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Icontroller", "-Icommander", "-Icommon", "-o", "build/.objs/controller/linux/x86_64/debug/controller/controller.c.o", "controller/controller.c"],
+  "file": "controller/controller.c"
 }]

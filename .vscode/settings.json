@@ -6,6 +6,9 @@
         "commander_itf.h": "c",
         "def_commander.h": "c",
         "stdint.h": "c",
-        "default_command.h": "c"
+        "default_command.h": "c",
+        "controller.h": "c",
+        "def_container.h": "c",
+        "def_controller.h": "c"
     }
 }
