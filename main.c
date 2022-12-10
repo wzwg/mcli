@@ -37,9 +37,8 @@ int testCommander()
     return 0;
 }
 
-int main(int argc, char **argv)
+int test()
 {
-    // testCommander();
     itf_commander_t *cmder = commander_itf_new(&writer);
     register_builtin_commands(cmder);
     itf_controller_t *ctrler = controller_itf_new(cmder, &writer);
@@ -47,6 +46,14 @@ int main(int argc, char **argv)
     char inputText[] = "echo hello world hahah";
 
     ITF_CALL(ctrler, input, sizeof(inputText), inputText);
+
+    return 0;
+}
+
+int main(int argc, char **argv)
+{
+    // testCommander();
+    test();
 
     return 0;
 }
